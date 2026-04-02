@@ -20,16 +20,16 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80" alt="Portfolio" fill className="object-cover opacity-15" />
+          <Image src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80" alt="Portfolio" fill className="object-cover opacity-15" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <AnimateOnScroll>
             <span className="teal-bar" />
             <span className="section-label block mb-4">Our Work</span>
-            <h1 className="font-heading font-black text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Project Portfolio</h1>
+            <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Project Portfolio</h1>
             <p className="font-body text-lg text-warm-light max-w-2xl leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>
               Every project is a story of transformation. Browse our work across renovation, custom builds, multi-unit development, and commercial construction.
             </p>
@@ -45,12 +45,12 @@ export default function PortfolioPage() {
       </section>
 
       {/* Grid */}
-      <section className="py-16 px-6 bg-charcoal">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 bg-charcoal">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {projects.map((proj, i) => (
             <AnimateOnScroll key={proj.title} delay={i * 70}>
               <div className="card-dark overflow-hidden hover-lift group h-full flex flex-col">
-                <div className="relative h-56 overflow-hidden flex-shrink-0">
+                <div className="relative h-48 sm:h-56 overflow-hidden flex-shrink-0">
                   <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent" />
                   <div className="absolute top-4 left-4"><span className={`badge ${proj.tag}`}>{proj.type}</span></div>
@@ -72,10 +72,10 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-charcoal-mid text-center border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid text-center border-t border-white/5">
         <AnimateOnScroll>
           <span className="teal-bar mx-auto" />
-          <h2 className="font-heading font-black text-4xl text-offwhite mb-5 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Your project could be next.</h2>
+          <h2 className="font-heading font-black text-2xl sm:text-4xl text-offwhite mb-5 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Your project could be next.</h2>
           <p className="font-body text-warm-light max-w-lg mx-auto mb-10 leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>We&apos;d love to hear about what you&apos;re building. Get in touch for a free quote and consultation.</p>
           <Link href="/contact" className="btn-teal">Start Your Project <ArrowRight size={16} /></Link>
         </AnimateOnScroll>

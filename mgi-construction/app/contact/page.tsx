@@ -25,12 +25,12 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-20 px-6 bg-charcoal">
+      <section className="pt-28 sm:pt-40 pb-12 sm:pb-20 px-4 sm:px-6 bg-charcoal">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
             <span className="teal-bar" />
             <span className="section-label block mb-4">Start Your Project</span>
-            <h1 className="font-heading font-black text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Get in Touch</h1>
+            <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Get in Touch</h1>
             <p className="font-body text-lg text-warm-light max-w-xl leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>
               Tell us about your project and we&apos;ll provide a free consultation and detailed quote. No pressure. No obligation. Just honest answers.
             </p>
@@ -39,14 +39,14 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 px-6 bg-charcoal">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 bg-charcoal">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12">
 
           {/* Contact info */}
           <div className="lg:col-span-2">
             <AnimateOnScroll>
-              <div className="card-dark p-8 mb-5">
-                <h2 className="font-heading font-700 text-xl text-offwhite mb-6" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>Contact Information</h2>
+              <div className="card-dark p-6 sm:p-8 mb-4 sm:mb-5">
+                <h2 className="font-heading font-700 text-lg sm:text-xl text-offwhite mb-5 sm:mb-6" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>Contact Information</h2>
                 <div className="flex flex-col gap-6">
                   {[
                     { href: "tel:+19059951234", Icon: Phone, label: "Phone", value: "(905) 995-1234" },
@@ -79,8 +79,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="card-dark p-8">
-                <h3 className="font-heading font-700 text-lg text-offwhite mb-5" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>Where We Build</h3>
+              <div className="card-dark p-6 sm:p-8">
+                <h3 className="font-heading font-700 text-lg text-offwhite mb-4 sm:mb-5" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>Where We Build</h3>
                 <div className="flex flex-wrap gap-2">
                   {["GTA & York Region","Hamilton","Chatham-Kent","Kingston","Ottawa","Cornwall / SDG","London","Barrie"].map((m) => <span key={m} className="badge badge-warm text-[0.62rem]">{m}</span>)}
                 </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
           {/* Form */}
           <div className="lg:col-span-3">
             <AnimateOnScroll delay={120}>
-              <div className="card-dark p-8 md:p-12">
+              <div className="card-dark p-5 sm:p-8 md:p-12">
                 {submitted ? (
                   <div className="flex flex-col items-center text-center py-16 gap-5">
                     <div className="w-16 h-16 bg-teal/20 border border-teal/40 flex items-center justify-center">
@@ -148,7 +148,7 @@ export default function ContactPage() {
                           style={{ fontFamily: "'Open Sans', sans-serif" }} />
                       </div>
 
-                      <button type="submit" disabled={loading} className="btn-teal self-start mt-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                      <button type="submit" disabled={loading} className="btn-teal w-full sm:w-auto sm:self-start mt-2 disabled:opacity-60 disabled:cursor-not-allowed">
                         {loading ? "Sending…" : <><span>Send Message</span><Send size={15} /></>}
                       </button>
                     </form>

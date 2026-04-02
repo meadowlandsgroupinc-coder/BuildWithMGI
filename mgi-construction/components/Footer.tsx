@@ -6,17 +6,17 @@ export default function Footer() {
     <footer className="bg-charcoal border-t border-white/5">
 
       {/* CTA band */}
-      <div className="bg-teal py-16 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="bg-teal py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-center md:text-left">
           <div>
             <p className="font-body text-teal-light/60 text-sm uppercase tracking-widest mb-2" style={{ fontFamily: "'Open Sans', sans-serif" }}>Ready to build?</p>
-            <h2 className="font-heading font-bold text-offwhite text-4xl md:text-5xl tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Let&apos;s transform your space.</h2>
+            <h2 className="font-heading font-bold text-offwhite text-2xl sm:text-4xl md:text-5xl tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Let&apos;s transform your space.</h2>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-offwhite font-heading font-700 text-sm tracking-widest uppercase hover:bg-charcoal-light transition-colors" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-charcoal text-offwhite font-heading text-sm tracking-widest uppercase hover:bg-charcoal-light transition-colors min-h-[48px]" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>
               Get a Quote <ArrowRight size={15} />
             </Link>
-            <Link href="/portfolio" className="inline-flex items-center gap-2 px-8 py-4 bg-transparent text-offwhite font-heading font-600 text-sm tracking-widest uppercase border border-offwhite/40 hover:border-offwhite transition-colors" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}>
+            <Link href="/portfolio" className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-transparent text-offwhite font-heading text-sm tracking-widest uppercase border border-offwhite/40 hover:border-offwhite transition-colors min-h-[48px]" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}>
               View Our Work
             </Link>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-teal flex items-center justify-center">
@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4 mt-8">
             {[Instagram, Linkedin, Facebook].map((Icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 border border-white/10 flex items-center justify-center text-warm-light hover:border-teal hover:text-teal-pale transition-colors">
-                <Icon size={15} />
+              <a key={i} href="#" className="w-11 h-11 sm:w-9 sm:h-9 border border-white/10 flex items-center justify-center text-warm-light hover:border-teal hover:text-teal-pale transition-colors">
+                <Icon size={17} />
               </a>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5 px-6 py-5">
+      <div className="border-t border-white/5 px-4 sm:px-6 py-5" style={{ paddingBottom: "max(env(safe-area-inset-bottom, 0px), 1.25rem)" }}>
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="font-body text-xs text-warm" style={{ fontFamily: "'Open Sans', sans-serif" }}>© {new Date().getFullYear()} Meadowlands Group Inc. All rights reserved.</p>
           <p className="font-body text-xs text-warm/50" style={{ fontFamily: "'Open Sans', sans-serif" }}>Build with MGI · Newmarket, Ontario</p>

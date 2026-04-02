@@ -30,26 +30,26 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80" alt="About MGI" fill className="object-cover opacity-15" />
+          <Image src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80" alt="About MGI" fill className="object-cover opacity-15" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <AnimateOnScroll>
             <span className="teal-bar" />
             <span className="section-label block mb-4">Our Story</span>
-            <h1 className="font-heading font-black text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Built Different.<br />Since 2014.</h1>
+            <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Built Different.<br />Since 2014.</h1>
             <p className="font-body text-lg text-warm-light max-w-2xl leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>Meadowlands Group is the result of two brothers who believed Ontario deserved a construction company that actually cared — about the work, the client, and the community.</p>
           </AnimateOnScroll>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-24 px-6 bg-charcoal">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <AnimateOnScroll>
-            <div className="relative h-[500px] teal-glow">
+            <div className="relative h-[280px] sm:h-[400px] md:h-[500px] teal-glow">
               <Image src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80" alt="MGI team" fill className="object-cover" />
               <div className="absolute top-0 left-0 w-12 h-0.5 bg-teal" />
               <div className="absolute top-0 left-0 w-0.5 h-12 bg-teal" />
@@ -59,7 +59,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
           <AnimateOnScroll delay={150}>
             <span className="teal-bar" />
-            <h2 className="font-heading font-black text-4xl text-offwhite mb-8 tracking-tight leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>A decade building Ontario from the ground up.</h2>
+            <h2 className="font-heading font-black text-2xl sm:text-4xl text-offwhite mb-6 sm:mb-8 tracking-tight leading-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>A decade building Ontario from the ground up.</h2>
             <div className="flex flex-col gap-5 font-body text-sm text-warm-light leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>
               <p>Meadowlands Group Inc. was founded in Newmarket in 2014 by brothers Faisal and Saleem Mirza — with a clear vision: build better, communicate honestly, and treat every client&apos;s home or business the way you&apos;d treat your own.</p>
               <p>What began as a residential renovation company has grown into a vertically integrated construction and development firm with active projects across the GTA, York Region, Hamilton, Kingston, Chatham-Kent, Eastern Ontario, and Ottawa.</p>
@@ -70,19 +70,19 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-6 bg-charcoal-mid border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
-            <div className="text-center mb-14">
+            <div className="text-center mb-10 sm:mb-14">
               <span className="teal-bar mx-auto" />
               <span className="section-label block mb-3">What Drives Us</span>
-              <h2 className="font-heading font-black text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Our Core Values</h2>
+              <h2 className="font-heading font-black text-3xl sm:text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Our Core Values</h2>
             </div>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {values.map((val, i) => (
               <AnimateOnScroll key={val.title} delay={i * 90}>
-                <div className="card-teal-border p-8 hover-lift h-full">
+                <div className="card-teal-border p-6 sm:p-8 hover-lift h-full">
                   <div className="w-12 h-12 bg-teal/15 border border-teal/30 flex items-center justify-center mb-6"><val.icon size={20} className="text-teal-pale" /></div>
                   <h3 className="font-heading font-700 text-lg text-offwhite mb-3 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>{val.title}</h3>
                   <p className="font-body text-sm text-warm-light leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>{val.desc}</p>
@@ -94,16 +94,16 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24 px-6 bg-charcoal border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
-            <div className="text-center mb-14">
+            <div className="text-center mb-10 sm:mb-14">
               <span className="teal-bar mx-auto" />
               <span className="section-label block mb-3">Leadership</span>
-              <h2 className="font-heading font-black text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>The Team Behind the Build</h2>
+              <h2 className="font-heading font-black text-3xl sm:text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>The Team Behind the Build</h2>
             </div>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7">
             {team.map((member, i) => (
               <AnimateOnScroll key={member.name} delay={i * 100}>
                 <div className="card-dark overflow-hidden hover-lift">
@@ -126,22 +126,22 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 px-6 bg-charcoal-mid border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <AnimateOnScroll>
-            <div className="text-center mb-14">
+            <div className="text-center mb-10 sm:mb-14">
               <span className="teal-bar mx-auto" />
               <span className="section-label block mb-3">Our Journey</span>
-              <h2 className="font-heading font-black text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>A Decade of Milestones</h2>
+              <h2 className="font-heading font-black text-3xl sm:text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>A Decade of Milestones</h2>
             </div>
           </AnimateOnScroll>
           <div className="relative">
-            <div className="absolute left-[72px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-teal/40 to-transparent" />
-            <div className="flex flex-col gap-7">
+            <div className="absolute left-[52px] sm:left-[72px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-teal/40 to-transparent" />
+            <div className="flex flex-col gap-5 sm:gap-7">
               {milestones.map((m, i) => (
                 <AnimateOnScroll key={m.year} delay={i * 70}>
-                  <div className="flex items-start gap-8">
-                    <span className="font-heading font-black text-lg text-teal-pale w-14 flex-shrink-0 text-right" style={{ fontFamily: "'Montserrat', sans-serif" }}>{m.year}</span>
+                  <div className="flex items-start gap-4 sm:gap-8">
+                    <span className="font-heading font-black text-sm sm:text-lg text-teal-pale w-10 sm:w-14 flex-shrink-0 text-right" style={{ fontFamily: "'Montserrat', sans-serif" }}>{m.year}</span>
                     <div className="flex-shrink-0 w-3 h-3 rounded-full bg-teal border-2 border-teal-pale mt-1 relative z-10" />
                     <p className="font-body text-sm text-warm-light leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>{m.text}</p>
                   </div>
@@ -153,9 +153,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-charcoal text-center border-t border-white/5">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-charcoal text-center border-t border-white/5">
         <AnimateOnScroll>
-          <h2 className="font-heading font-black text-4xl text-offwhite mb-6 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ready to build with us?</h2>
+          <h2 className="font-heading font-black text-2xl sm:text-4xl text-offwhite mb-6 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Ready to build with us?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="btn-teal">Get a Free Quote <ArrowRight size={16} /></Link>
             <Link href="/portfolio" className="btn-outline-teal">View Our Work</Link>

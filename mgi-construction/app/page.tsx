@@ -36,41 +36,41 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800&q=85" alt="Premium construction" fill priority className="object-cover object-center" />
+          <Image src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800&q=85" alt="Premium construction" fill priority className="object-cover object-center" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/70 to-charcoal/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-24 sm:pt-28 pb-8">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-8 animate-fade-in" style={{ animationFillMode: "both" }}>
+            <div className="flex items-center gap-3 mb-6 sm:mb-8 animate-fade-in" style={{ animationFillMode: "both" }}>
               <div className="w-8 h-8 bg-teal flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-heading font-black text-xs" style={{ fontFamily: "'Montserrat', sans-serif" }}>MGI</span>
               </div>
               <div className="h-px flex-1 max-w-[60px] bg-teal" />
-              <span className="font-heading font-600 text-[0.68rem] tracking-[0.3em] text-teal-pale uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}>Build with MGI</span>
+              <span className="font-heading text-[0.62rem] sm:text-[0.68rem] tracking-[0.3em] text-teal-pale uppercase" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}>Build with MGI</span>
             </div>
 
-            <h1 className="font-heading font-black text-5xl md:text-6xl lg:text-7xl text-offwhite leading-[1.05] tracking-tight mb-6 animate-fade-up"
+            <h1 className="font-heading font-black text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl text-offwhite leading-[1.08] tracking-tight mb-5 sm:mb-6 animate-fade-up"
               style={{ fontFamily: "'Montserrat', sans-serif", animationFillMode: "both", animationDelay: "120ms" }}>
               We Don&apos;t Just<br />
               Build Spaces.<br />
               <span className="text-teal-shimmer">We Elevate Them.</span>
             </h1>
 
-            <p className="font-body text-base text-warm-light leading-relaxed max-w-lg mb-10 animate-fade-up"
+            <p className="font-body text-sm sm:text-base text-warm-light leading-relaxed max-w-lg mb-8 sm:mb-10 animate-fade-up"
               style={{ fontFamily: "'Open Sans', sans-serif", animationFillMode: "both", animationDelay: "260ms" }}>
               Meadowlands Group Inc. is Ontario&apos;s premier construction and renovation company — delivering exceptional craftsmanship, precision project management, and spaces that transform the way people live and work.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationFillMode: "both", animationDelay: "380ms" }}>
-              <Link href="/contact" className="btn-teal">Get a Free Quote <ArrowRight size={16} /></Link>
-              <Link href="/portfolio" className="btn-outline-teal">View Our Work</Link>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up" style={{ animationFillMode: "both", animationDelay: "380ms" }}>
+              <Link href="/contact" className="btn-teal w-full sm:w-auto text-center">Get a Free Quote <ArrowRight size={16} /></Link>
+              <Link href="/portfolio" className="btn-outline-teal w-full sm:w-auto text-center">View Our Work</Link>
             </div>
 
-            <div className="flex flex-wrap gap-5 mt-14 animate-fade-up" style={{ animationFillMode: "both", animationDelay: "480ms" }}>
+            <div className="flex flex-wrap gap-4 sm:gap-5 mt-10 sm:mt-14 animate-fade-up" style={{ animationFillMode: "both", animationDelay: "480ms" }}>
               {["Licensed & Insured", "10+ Years Experience", "Owner-Operated"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 size={14} className="text-teal-pale" />
@@ -86,13 +86,13 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="bg-charcoal-mid py-14 border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x divide-white/10">
+      <section className="bg-charcoal-mid py-10 sm:py-14 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-0 md:divide-x divide-white/10">
           {stats.map((stat, i) => (
             <AnimateOnScroll key={stat.label} delay={i * 80}>
-              <div className="flex flex-col items-center text-center md:px-8 py-4">
-                <span className="font-heading font-black text-5xl md:text-6xl text-teal-pale leading-none" style={{ fontFamily: "'Montserrat', sans-serif" }}>{stat.number}</span>
-                <span className="font-body text-xs text-warm-light tracking-[0.1em] uppercase mt-2" style={{ fontFamily: "'Open Sans', sans-serif" }}>{stat.label}</span>
+              <div className="flex flex-col items-center text-center md:px-8 py-3 sm:py-4">
+                <span className="font-heading font-black text-3xl sm:text-5xl md:text-6xl text-teal-pale leading-none" style={{ fontFamily: "'Montserrat', sans-serif" }}>{stat.number}</span>
+                <span className="font-body text-[0.65rem] sm:text-xs text-warm-light tracking-[0.1em] uppercase mt-1.5 sm:mt-2" style={{ fontFamily: "'Open Sans', sans-serif" }}>{stat.label}</span>
               </div>
             </AnimateOnScroll>
           ))}
@@ -100,14 +100,14 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-28 px-6 bg-charcoal">
+      <section className="py-16 sm:py-28 px-4 sm:px-6 bg-charcoal">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
               <div>
                 <span className="teal-bar" />
                 <span className="section-label block mb-3">What We Do</span>
-                <h2 className="font-heading font-black text-4xl md:text-5xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Full-Service<br />Construction Excellence
                 </h2>
               </div>
@@ -117,10 +117,10 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {services.map((svc, i) => (
               <AnimateOnScroll key={svc.title} delay={i * 80}>
-                <div className="card-dark p-8 hover-lift group h-full">
+                <div className="card-dark p-6 sm:p-8 hover-lift group h-full">
                   <div className="w-12 h-12 bg-teal/15 border border-teal/30 flex items-center justify-center mb-6 group-hover:bg-teal/25 transition-colors">
                     <svc.icon size={20} className="text-teal-pale" />
                   </div>
@@ -135,14 +135,14 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED PROJECTS ── */}
-      <section className="py-24 px-6 bg-charcoal-mid">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4 sm:gap-6">
               <div>
                 <span className="teal-bar" />
                 <span className="section-label block mb-3">Our Work</span>
-                <h2 className="font-heading font-black text-4xl md:text-5xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Featured Projects</h2>
+                <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Featured Projects</h2>
               </div>
               <Link href="/portfolio" className="self-start md:self-end font-heading font-600 text-sm text-teal-pale hover:text-teal-light transition-colors flex items-center gap-2" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600 }}>
                 Full Portfolio <ArrowRight size={14} />
@@ -150,10 +150,10 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {featuredProjects.map((proj, i) => (
               <AnimateOnScroll key={proj.title} delay={i * 90}>
-                <div className="relative overflow-hidden group hover-lift h-72 md:h-80">
+                <div className="relative overflow-hidden group hover-lift h-60 sm:h-72 md:h-80">
                   <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
                   <div className="absolute top-4 left-4">
@@ -173,10 +173,10 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY MGI ── */}
-      <section className="py-28 px-6 bg-charcoal">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-28 px-4 sm:px-6 bg-charcoal">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <AnimateOnScroll>
-            <div className="relative h-[540px] teal-glow">
+            <div className="relative h-[320px] sm:h-[420px] md:h-[540px] teal-glow">
               <Image src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80" alt="MGI craftsmanship" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
               {/* Teal corner accent */}
@@ -190,7 +190,7 @@ export default function HomePage() {
           <AnimateOnScroll delay={150}>
             <span className="teal-bar" />
             <span className="section-label block mb-3">Why Build with MGI</span>
-            <h2 className="font-heading font-black text-4xl md:text-5xl text-offwhite mb-8 tracking-tight leading-[1.1]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-offwhite mb-6 sm:mb-8 tracking-tight leading-[1.1]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Craftsmanship You<br />Can Count On.
             </h2>
             <p className="font-body text-warm-light text-sm leading-relaxed mb-5" style={{ fontFamily: "'Open Sans', sans-serif" }}>
@@ -222,20 +222,20 @@ export default function HomePage() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="py-24 px-6 bg-charcoal-mid border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <AnimateOnScroll>
-            <div className="text-center mb-14">
+            <div className="text-center mb-10 sm:mb-14">
               <span className="teal-bar mx-auto" />
               <span className="section-label block mb-3">What Clients Say</span>
-              <h2 className="font-heading font-black text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Built on Trust</h2>
+              <h2 className="font-heading font-black text-3xl sm:text-4xl text-offwhite tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Built on Trust</h2>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((t, i) => (
               <AnimateOnScroll key={t.name} delay={i * 100}>
-                <div className="card-teal-border p-8 hover-lift h-full flex flex-col">
+                <div className="card-teal-border p-6 sm:p-8 hover-lift h-full flex flex-col">
                   <div className="flex gap-1 mb-6">
                     {Array.from({ length: t.stars }).map((_, s) => <Star key={s} size={14} className="text-teal-pale fill-teal-pale" />)}
                   </div>

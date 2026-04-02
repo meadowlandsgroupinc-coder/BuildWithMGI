@@ -58,16 +58,16 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80" alt="Services" fill className="object-cover opacity-15" />
+          <Image src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80" alt="Services" fill className="object-cover opacity-15" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <AnimateOnScroll>
             <span className="teal-bar" />
             <span className="section-label block mb-4">What We Build</span>
-            <h1 className="font-heading font-black text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Our Services</h1>
+            <h1 className="font-heading font-black text-4xl sm:text-6xl md:text-7xl text-offwhite tracking-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>Our Services</h1>
             <p className="font-body text-lg text-warm-light max-w-2xl leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>
               From single-room renovations to full multi-unit developments — MGI delivers every scope with the same uncompromising standard of quality, precision, and professionalism.
             </p>
@@ -76,14 +76,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Services list */}
-      <section className="py-16 px-6 bg-charcoal">
-        <div className="max-w-7xl mx-auto flex flex-col gap-10">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 bg-charcoal">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-10">
           {services.map((svc, i) => (
             <AnimateOnScroll key={svc.title} delay={i * 60}>
               <div className="card-dark overflow-hidden hover-lift">
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className={`relative h-64 md:h-auto ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                    <Image src={svc.image} alt={svc.title} fill className="object-cover" />
+                  <div className={`relative h-52 sm:h-64 md:h-auto ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                    <Image src={svc.image} alt={svc.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                     <div className="absolute inset-0 bg-gradient-to-r from-charcoal/50 to-transparent" />
                     <div className="absolute top-0 left-0 w-10 h-0.5 bg-teal" />
                   </div>
@@ -113,12 +113,12 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-charcoal-mid text-center border-t border-white/5">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-charcoal-mid text-center border-t border-white/5">
         <AnimateOnScroll>
           <span className="teal-bar mx-auto" />
-          <h2 className="font-heading font-black text-4xl text-offwhite mb-5 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Not sure which service fits?</h2>
-          <p className="font-body text-warm-light max-w-xl mx-auto mb-10 leading-relaxed" style={{ fontFamily: "'Open Sans', sans-serif" }}>Tell us about your project and we&apos;ll provide a free consultation and quote — no obligation, no pressure.</p>
-          <Link href="/contact" className="btn-teal">Book a Free Consultation <ArrowRight size={16} /></Link>
+          <h2 className="font-heading font-black text-2xl sm:text-4xl text-offwhite mb-5 tracking-tight" style={{ fontFamily: "'Montserrat', sans-serif" }}>Not sure which service fits?</h2>
+          <p className="font-body text-warm-light max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed text-sm sm:text-base" style={{ fontFamily: "'Open Sans', sans-serif" }}>Tell us about your project and we&apos;ll provide a free consultation and quote — no obligation, no pressure.</p>
+          <Link href="/contact" className="btn-teal w-full sm:w-auto">Book a Free Consultation <ArrowRight size={16} /></Link>
         </AnimateOnScroll>
       </section>
     </>

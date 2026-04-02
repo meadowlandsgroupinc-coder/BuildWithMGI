@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-opensans: 'Open Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #282828;
+  color: #F5F4F2;
+  font-family: var(--font-opensans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: #005F7A; color: #F5F4F2; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #282828; }
+::-webkit-scrollbar-thumb { background: #005F7A; border-radius: 3px; }
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(28px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slideRight {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+@keyframes shimmerTeal {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.9s ease forwards; }
+
+/* ── Scroll fade ── */
+.section-fade {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.section-fade.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Teal shimmer text ── */
+.text-teal-shimmer {
+  background: linear-gradient(105deg, #004D63 0%, #0099C2 35%, #005F7A 55%, #0099C2 75%, #004D63 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerTeal 3.5s linear infinite;
+}
+
+/* ── Dividers ── */
+.divider-teal {
+  height: 2px;
+  background: linear-gradient(to right, #005F7A, transparent);
+}
+.divider-warm {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #5E5C5A, transparent);
+}
+
+/* ── Cards ── */
+.card-dark {
+  background: #333333;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.card-teal-border {
+  background: #333333;
+  border: 1px solid rgba(0,95,122,0.4);
+}
+.teal-glow {
+  box-shadow: 0 0 60px rgba(0,95,122,0.25), 0 0 120px rgba(0,95,122,0.1);
+}
+
+/* ── Hover lift ── */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.5);
+}
+
+/* ── Buttons ── */
+.btn-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 36px;
+  background: #005F7A;
+  color: #F5F4F2;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.btn-teal:hover { background: #007A9E; transform: translateY(-1px); }
+
+.btn-outline-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  background: transparent;
+  color: #F5F4F2;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(245,244,242,0.35);
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline-teal:hover { border-color: #005F7A; color: #0099C2; transform: translateY(-1px); }
+
+/* ── Tags ── */
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: var(--font-montserrat);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.badge-teal { background: rgba(0,95,122,0.25); color: #0099C2; border: 1px solid rgba(0,95,122,0.5); }
+.badge-warm { background: rgba(94,92,90,0.25); color: #7A7876; border: 1px solid rgba(94,92,90,0.4); }
+.badge-light { background: rgba(245,244,242,0.08); color: #F5F4F2; border: 1px solid rgba(245,244,242,0.2); }
+
+/* ── Teal accent bar ── */
+.teal-bar {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #005F7A;
+  margin-bottom: 20px;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-family: var(--font-montserrat);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0099C2;
+}
